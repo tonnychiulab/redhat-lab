@@ -1,0 +1,20 @@
+timedatectl set-timezone Asia/Taipei
+dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm
+dnf install btop htop nmap stress-ng tmux unzip
+dnf install ncurses -y
+dnf install net-tools -y
+
+#安裝podman
+dnf install podman
+
+#使用免費的 RHEL 10 UBI 映像檔
+podman pull registry.access.redhat.com/ubi10/ubi
+
+#進入容器
+podman run -it --name my-rhel registry.access.redhat.com/ubi10/ubi /bin/bash
+podman start my-rhel
+podman exec -it my-rhel /bin/bash
+
+#需登入才能更新
+subscription-manager register --username tonny.0955@gmail.com
+
