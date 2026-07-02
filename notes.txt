@@ -4,6 +4,13 @@ dnf install btop htop nmap nano stress-ng tmux unzip -y
 dnf install ncurses -y
 dnf install net-tools -y
 
+##常用命令
+1.只看 TCP：
+sudo ss -lntp
+
+2.只看 UDP：
+sudo ss -lnup
+
 #新增帳號
 adduser user1
 passwd user1
