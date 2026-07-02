@@ -4,6 +4,12 @@ dnf install btop htop nmap nano stress-ng tmux unzip -y
 dnf install ncurses -y
 dnf install net-tools -y
 
+#新增帳號
+adduser user1
+passwd user1
+usermod -aG wheel user1
+cat /etc/group | grep wheel
+
 #安裝podman
 dnf install podman
 
