@@ -1,6 +1,6 @@
 timedatectl set-timezone Asia/Taipei
-dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm
-dnf install btop htop nmap stress-ng tmux unzip
+dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm -y
+dnf install btop htop nmap nano stress-ng tmux unzip -y
 dnf install ncurses -y
 dnf install net-tools -y
 
